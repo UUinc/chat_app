@@ -6,14 +6,35 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      drawer: Drawer(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("Button Clicked");
-        },
+        body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Text(
+            "Let's sign you in!",
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.brown,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.5,
+            ),
+          ),
+          const Text(
+            'Welcome back! \n You\'ve been missed!',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: Colors.blueGrey,
+            ),
+          ),
+          Image.network(
+            'https://jobseekerspage.com/static/media/sign-in.39c480bb6b18deaae366.png',
+            height: 250,
+          ),
+        ],
       ),
-      body: Text("Hello!"),
-    );
+    ));
   }
 }
